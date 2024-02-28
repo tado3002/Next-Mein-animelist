@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const GenreList = ({genres}) => {
@@ -9,7 +10,9 @@ const GenreList = ({genres}) => {
                 genres.map((genre,index)=>{
                     return (
                         <button key={index} className='border shadow-color-secondary shadow-lg border-color-secondary p-2 text-sm rounded-xl'>
+                            <Link href={`/search/genres/${genre.mal_id}`}>
                             {genre.name}
+                            </Link>
                         </button>
                     )
                 })

@@ -2,9 +2,8 @@ import { getAnimeResponse } from "@/libs/api-libs";
 import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/Header";
 
-export default async function Page({ params }) {
+export default async function Page({params}) {
   const { keyword } = params;
-
   const anime = await getAnimeResponse('',`?q=${keyword}`)
 
   return (

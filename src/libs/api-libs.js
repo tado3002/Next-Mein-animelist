@@ -14,10 +14,12 @@ export const getNestedAnime = async (resource, objProperty) => {
   return anime.data.flatMap((item) => item[objProperty]);
 };
 export const getRandomizeNumber = (data, gap) => {
-  let start = Math.floor(Math.random() * data.length)
-      // jika length - start < gap, exp : 200 195 8 -3
-  if(data.length - start < gap){start = data.length - gap}
+  let start = Math.floor(Math.random() * data.length);
+  // jika length - start < gap, exp : 200 195 8 -3
+  if (data.length - start < gap) {
+    start = data.length - gap;
+  }
   const end = start + gap;
-  const response = {data: data.slice(start, end)};
+  const response = { data: data.slice(start, end) };
   return response;
 };

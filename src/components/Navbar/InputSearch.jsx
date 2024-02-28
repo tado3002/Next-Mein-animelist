@@ -8,7 +8,7 @@ const InputSearch = () => {
   const router = useRouter();
   const searchHandle = (e) => {
     const keyword = searchRef.current.value;
-    keyword !== "" && keyword.trim() !== "" ? router.push(`/search/${keyword}`) : "";
+    keyword !== "" && keyword.trim() !== "" ? router.push(`/search/name/${keyword}`) : "";
     e.preventDefault();
   };
   const enterHandler = (e) => {
